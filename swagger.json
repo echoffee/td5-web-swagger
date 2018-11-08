@@ -31,7 +31,7 @@
         "parameters": [
           {
             "in": "body",
-            "name": "body",
+            "name": "user",
             "description": "User à créer",
             "required": true,
             "schema": {
@@ -116,6 +116,15 @@
             "description": "Id corresponding to the targeted user",
             "required": true,
             "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "user",
+            "description": "The new user's informations, _id is ommited.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
           }
         ],
         "responses": {
